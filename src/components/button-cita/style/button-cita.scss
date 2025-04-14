@@ -1,0 +1,13 @@
+@import "../../../styles/globals.scss";
+
+.btn-comp {
+  margin: 2.5em auto;
+}
+.main-btn {
+  border-radius: 15px;
+  background: $color-pink;
+  color: $color-white;
+  padding: 12px;
+  text-decoration: none;
+  box-shadow: -2px 0px 15px $color-border;
+}

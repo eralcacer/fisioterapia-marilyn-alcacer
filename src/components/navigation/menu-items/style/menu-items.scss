@@ -1,0 +1,26 @@
+@import "../../../../styles/globals.scss";
+
+.nav-links {
+  text-decoration: none;
+  margin: 1em;
+  font-weight: 500;
+  color: $color-pink-dark;
+}
+.nav-icon {
+  color: $color-pink-dark;
+  width: 32px;
+  height: auto;
+  margin: 1em;
+}
+.servicios-icon {
+  width: 32px;
+  height: 32px;
+  background: $color-pink-dark;
+  border-radius: 15px;
+}
+.nav-icon-sm {
+  color: $color-pink-dark;
+  width: 24px;
+  height: auto;
+  padding: 3px;
+}

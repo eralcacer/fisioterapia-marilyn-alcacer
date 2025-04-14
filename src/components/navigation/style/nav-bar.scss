@@ -1,0 +1,98 @@
+@import "../../../styles/globals.scss";
+
+.nav-comp {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  position: sticky;
+  left: 10%;
+  top: 0;
+  z-index: 1000;
+  margin: auto;
+  background: $color-pink-light;
+}
+.move-down {
+  animation: animateDownNav 0.3s forwards;
+}
+.logo {
+  display: block;
+}
+.logo-mob {
+  display: none;
+}
+@keyframes animateDownNav {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0, 0, 0;
+    width: 100%;
+    border-radius: 0;
+  }
+  100% {
+    transform: translateY(12px);
+    box-shadow: -2px 0px 15px $color-border;
+    width: 80%;
+    border-radius: 15px;
+  }
+}
+.move-up {
+  animation: animateUpnNav 0.3s forwards;
+}
+@keyframes animateUpnNav {
+  0% {
+    transform: translateY(12px);
+    box-shadow: -2px 0px 15px $color-border;
+    width: 80%;
+    border-radius: 15px;
+  }
+  100% {
+    transform: translateY(0);
+    box-shadow: 0, 0, 0;
+    width: 100%;
+    border-radius: 0;
+  }
+}
+.left-comp {
+  width: 30%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.left-comp h3 {
+  text-align: center;
+  color: $color-pink-dark;
+}
+.right-comp {
+  display: flex;
+  width: 60%;
+  justify-content: flex-end;
+}
+.right-comp-mob {
+  display: none;
+}
+@media screen and (max-width: 1000px) {
+  .nav-comp {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    position: sticky;
+    left: 10%;
+    bottom: 0;
+    z-index: 1000;
+    margin: auto;
+    background: $color-pink-light;
+  }
+  .right-comp {
+    display: none;
+  }
+  .right-comp-mob {
+    display: flex;
+    width: 60%;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .logo {
+    display: none;
+  }
+  .logo-mob {
+    display: block;
+  }
+}

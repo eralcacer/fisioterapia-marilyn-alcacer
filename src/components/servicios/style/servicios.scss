@@ -1,0 +1,51 @@
+@import "../../../styles/globals.scss";
+
+.servicios-comp {
+  background: $color-white;
+  padding: 2em;
+}
+.servicios-grid {
+  display: grid;
+  gap: 2em;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+}
+.servicio-comp {
+  height: 289px;
+  margin: auto;
+  text-align: center;
+  list-style: none;
+}
+.servicios-comp h1 {
+  margin-left: 2em;
+  margin-bottom: 1em;
+}
+.icon {
+  width: 52px;
+  height: 52px;
+  color: $color-pink-dark;
+}
+.servicio-item {
+  list-style: none;
+  width: max(auto, 100px);
+  margin-bottom: 12px;
+}
+@media screen and (max-width: 1000px) {
+  .servicios-grid {
+    display: block;
+  }
+  .servicios-comp {
+    height: auto;
+    margin: auto;
+    text-align: center;
+    list-style: none;
+  }
+  .servicio-comp {
+    height: auto;
+    margin: auto;
+    text-align: center;
+    list-style: none;
+  }
+  .servicios-comp h1 {
+    text-align: center;
+  }
+}
