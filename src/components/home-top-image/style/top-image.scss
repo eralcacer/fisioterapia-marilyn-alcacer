@@ -5,24 +5,50 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 .image-profile {
   height: 85%;
   width: auto;
   position: absolute;
   bottom: -4px;
-  right: 24px;
+  right: -32px;
 }
 .left-title {
-  margin-right: 5%;
   margin-top: auto;
   margin-bottom: auto;
   width: 50%;
+  z-index: 100;
 }
 .text-comp {
   width: 80%;
   margin: auto;
 }
-.right-image {
-  //   width: 50%;
+@media only screen and (max-width: 600px) {
+  .image-comp {
+    background-color: $color-pink-light;
+    position: relative;
+    overflow: hidden;
+    height: 85vh !important;
+  }
+  .left-title {
+    position: absolute;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    bottom: 20px;
+  }
+  .image-profile {
+    height: 100%;
+    width: auto;
+    z-index: 1;
+    right: -50px;
+  }
+  .left-title p {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: $color-black;
+    text-shadow: 4px -2px 3px $color-border;
+  }
 }

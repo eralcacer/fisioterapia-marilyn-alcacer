@@ -6,8 +6,9 @@
 .main-btn {
   border-radius: 15px;
   background: $color-pink;
-  color: $color-white;
+  color: $color-pink-dark;
   padding: 12px;
   text-decoration: none;
   box-shadow: -2px 0px 15px $color-border;
+  word-wrap: break-word;
 }
