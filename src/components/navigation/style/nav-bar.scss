@@ -5,6 +5,7 @@
   align-items: center;
   background-color: transparent;
   position: sticky;
+  position: -webkit-sticky;
   left: 10%;
   top: 0;
   z-index: 1000;
@@ -74,6 +75,7 @@
     align-items: center;
     background-color: transparent;
     position: sticky;
+    position: -webkit-sticky;
     left: 10%;
     bottom: 0;
     z-index: 1000;

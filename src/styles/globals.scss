@@ -1,5 +1,11 @@
 @import "./__variables.scss";
 
+html,
+body {
+  overflow-x: clip;
+  margin: 0;
+  padding: 0;
+}
 body {
   font-family: $font-main;
   margin: 0;
