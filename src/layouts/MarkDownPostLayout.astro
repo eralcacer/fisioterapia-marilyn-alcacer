@@ -4,7 +4,7 @@ const { frontmatter } = Astro.props;
 ---
 
 <SiteLayout title={frontmatter.title} description={frontmatter.description}>
-    <div class="blog-comp fit-height-screen">
+    <div class="blog-comp">
         <slot />
     </div>
 </SiteLayout>
