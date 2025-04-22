@@ -1,0 +1,10 @@
+---
+import SiteLayout from "./SiteLayout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<SiteLayout title={frontmatter.title} description={frontmatter.description}>
+    <div class="blog-comp fit-height-screen">
+        <slot />
+    </div>
+</SiteLayout>
