@@ -1,0 +1,128 @@
+@import "../../../styles/globals.scss";
+
+.blogs-comp {
+  display: grid;
+  grid-template-columns: auto;
+}
+.featured-news-comp {
+  padding: 2em 4em;
+  width: 80%;
+  height: fit-content;
+  overflow: hidden;
+}
+.blog-cards-comp {
+  display: flex;
+  overflow-x: scroll;
+  gap: 1em;
+  scroll-snap-type: x mandatory;
+  scrollbar-color: $color-pink-dark transparent;
+  scrollbar-width: thin; // for Firefox
+  padding-bottom: 10px;
+  padding-left: 0;
+  padding-right: 0;
+  scroll-behavior: smooth;
+  overflow: -moz-scrollbars-vertical;
+}
+
+.blog-card {
+  flex: 0 0 auto;
+  height: 120px;
+  border-radius: 15px;
+  padding: 1em;
+  list-style: none;
+  white-space: nowrap;
+  background-color: $color-pink;
+  scroll-snap-align: start;
+  box-shadow: 0 2px 6px $color-black-transparent;
+  margin: auto;
+  margin-bottom: 16px;
+  min-width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blog-card:hover {
+  background: $color-pink-light;
+  cursor: pointer;
+}
+
+// WebKit scrollbar styling
+.blog-cards-comp::-webkit-scrollbar {
+  height: 8px;
+}
+
+.blog-cards-comp::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.blog-cards-comp::-webkit-scrollbar-thumb {
+  background-color: $color-pink-dark;
+  border-radius: 10px;
+}
+
+.blog-cards-comp::after {
+  content: "";
+  flex: 0 0 1px; // Tiny invisible space to cause overflow
+}
+.blog-card a {
+  text-decoration: none;
+}
+.article-comp {
+  display: block;
+  width: 85%;
+  padding: 0 2em;
+}
+.news-list {
+  height: 200px;
+  width: auto;
+  padding: 0;
+}
+.blog-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.image-post-comp {
+  width: auto;
+}
+.image-blog {
+  height: 200px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 0;
+  width: auto;
+}
+.text-blog-comp {
+  width: 50%;
+  margin: auto;
+}
+@media screen and (max-width: 1000px) {
+  .article-comp {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .news-list {
+    height: fit-content;
+    width: auto;
+    padding-bottom: 24px;
+  }
+  .image-blog {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 0;
+  }
+  .blog-link {
+    display: block;
+    width: 100%;
+  }
+  .text-blog-comp {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+}

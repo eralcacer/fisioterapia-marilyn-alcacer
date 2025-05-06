@@ -1,0 +1,23 @@
+---
+import { Image } from "astro:assets";
+const allPosts = Object.values(import.meta.glob("/src/pages/posts/*.md", {eager: true}));
+---
+<div class="article-comp">
+    <h2 class="title center-text">Mis Últimos Artículos</h2>
+    <ul>
+        {allPosts.map((post: any) => 
+            <li class="blog-card news-list">
+                <a class="blog-link" href={post.url}>
+                    <div class="image-post-comp">
+                        {post.frontmatter.featured_image && 
+                            <img class="image-blog" src={post.frontmatter.featured_image} alt="..." />
+                        }
+                    </div>
+                    <div class="text-blog-comp">
+                        <h2 class="title">{post.frontmatter.title}</h2>
+                        <p class="text-desc">{post.frontmatter.description}</p>
+                    </div>
+                </a></li>)
+        }
+    </ul>
+</div>

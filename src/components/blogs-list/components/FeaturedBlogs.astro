@@ -1,0 +1,12 @@
+---
+const allPosts = Object.values(import.meta.glob("/src/pages/posts/*.md", {eager: true}));
+---
+<div class="featured-news-comp">
+    <h2 class="title center-text">Artículos Favoritos</h2>
+    <ul class="blog-cards-comp">
+        {allPosts.map((post: any) => 
+        <li class="blog-card">
+            <a class="title upper-case font-dark-500" href={post.url}>{post.frontmatter.title}</a></li>)
+        }
+    </ul>
+</div>
